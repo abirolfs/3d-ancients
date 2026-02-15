@@ -2,7 +2,7 @@ display_name,stub,dropdown_parent
 Home,/,
 Browse Collection,/browse.html,
 Map,/map.html,
-About,/about.html,
-Purpose and Scope,/purpose-scope.html,About
-Methods,/methods.html,About
+About,
+Purpose and Scope,/purpose-scope.html,About,
+Methods,/methods.html,About,
 Metadata,/metadata.html,About
