@@ -1,3 +1,9 @@
+---
+# basic layout for sketchfab models
+# assumes Item has the SketchFab embed link the "object_location" value
+layout: item/item-page-base
+---
+
 <div class="card mb-4 text-center">
 
     {% include item/sketchfab-embed.html title = page.title model_url=page.object_location %}
