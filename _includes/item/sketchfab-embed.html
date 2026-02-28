@@ -1,0 +1,16 @@
+<div class="sketchfab-embed">
+    <iframe
+        title= "{{ include.title | default: 'Model title' }}"
+        frameborder="0"
+        allowfullscreen
+        mozallowfullscreen="true"
+        webkitallowfullscreen="true"
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        xr-spatial-tracking
+        execution-while-out-of-viewport
+        execution-while-not-rendered
+        web-share
+        src= "{{ include.model_url | relative_url }}"
+    >
+    </iframe>
+</div>
