@@ -1,0 +1,374 @@
+---
+# Metadata page
+layout: page
+---
+
+{{ content }}
+
+<div class="table-responsive-md">
+    <table id="item-table" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Field name</th>
+                <th>Dublin Core Mapping</th>
+                <th>Value Scheme</th>
+                <th>Obligation</th>
+                <th>Occurence</th>
+                <th>Input Guidelines</th>
+                <th>Examples</th>
+            </tr>
+        </thead>
+        <!-- objectid -->
+        <tr>
+            <td>objectid</td>
+            <td>Identifier</td>
+            <td></td>
+            <td>Mandatory</td>
+            <td>No Repeats</td>
+            <td>itemXXX, where XXX is a sequential 3-digit zero-padded number</td>
+            <td>
+                <ul>
+                    <li>item001</li>
+                    <li>item015</li>
+                    <li>item107</li>
+                </ul>
+            </td>
+        </tr>
+        <!-- title -->
+        <tr>
+            <td>title</td>
+            <td>Title</td>
+            <td></td>
+            <td>Mandatory</td>
+            <td>Repeats</td>
+            <td>Copy the title of the source media, use the subject depicted in the artwork, or the name of the physical object/architecture/site.</td>
+            <td>
+                <ul>
+                    <li>Daphnis</li>
+                    <li>Philosopher Sarcophagus</li>
+                    <li>Laocoon Statue Group</li>
+                </ul>
+            </td>
+        </tr>
+        <!-- creator -->
+        <tr>
+            <td>creator</td>
+            <td></td>
+            <td></td>
+            <td>Mandatory, if applicable</td>
+            <td>Repeats</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <!-- model_creator -->
+        <tr>
+            <td>model_creator</td>
+            <td></td>
+            <td></td>
+            <td>Mandatory, if applicable</td>
+            <td>Repeats</td>
+            <td>List names of all known contributors to a digital heritage object, delimited by semicolon ";". Names follow the format: Firstname Lastname.</td>
+            <td>
+                <ul>
+                    <li>Umair Malik</li>
+                    <li>Whitney Johnson; Matthew Brennan</li>
+                    <li>Bernd Breuckmann; Mohamed Abdelaziz; Kacie Alaga; Chad Keller; David Koller; Lorenz Wurmser</li>
+                </ul>
+            </td>
+        </tr>
+        <!-- software -->
+        <tr>
+            <td>software</td>
+            <td></td>
+            <td></td>
+            <td>Mandatory, if applicable</td>
+            <td>Repeats</td>
+            <td>List the names of all known software used to create the digital heritage object, delimited by semicolon ";".</td>
+            <td>
+                <ul>
+                    <li>Metashape; Meshmixer</li>
+                    <li>RealityCapture; ZBrush</li>
+                    <li>Lightroom; Photoscan; Meshmixer; ZBrush; Photoshop; Meshlab</li>
+                </ul>
+            </td>
+        </tr>
+        <!-- equipment -->
+        <tr>
+            <td>equipment</td>
+            <td></td>
+            <td></td>
+            <td>Mandatory, if applicable</td>
+            <td>Repeats</td>
+            <td>List the names of all known equipment used to create the digital heritage object, delimited by semicolon ";".</td>
+            <td>
+                <ul>
+                    <li>Sony &alpha;6000</li>
+                    <li>Breuckmann SmartScan</li>
+                    <li>Nikon D810; Sony &alpha;6000</li>
+                </ul>
+            </td>
+        </tr>
+        <!-- date -->
+        <tr>
+            <td>date</td>
+            <td>Date</td>
+            <td><a href="http://purl.org/dc/elements/1.1/date">ISO 8601 Period of Time Specification</a></td>
+            <td>Mandatory, if applicable</td>
+            <td>Repeats</td>
+            <td>For a single, specific year, enter date in YYYY format, where YYYY is a four-digit, zero-padded number. For a time period, enter date in YYYY/YYYY format, with the earliest date before the /, and latest date after. Years B.C.E should be indicated by a "-" before the first digit.</td>
+            <td>
+                <ul>
+                    <li>-0100/0000</li>
+                    <li>0100/0150</li>
+                    <li>-0325</li>
+                </ul>
+            </td>
+        </tr>
+        <!-- time_period_name -->
+            <td>time_period_name</td>
+            <td></td>
+            <td></td>
+            <td>Optional</td>
+            <td>Repeats</td>
+            <td>[Period] [Region], where [Period] is typically one to two words representing the agreed-upon name of the time period, and [Region] specifies the cultural region to which the item belongs.</td>
+            <td>
+                <ul>
+                    <li>Hellenistic Greece</li>
+                    <li>Old Kingdom Egypt</li>
+                    <li>Imperial Rome</li>
+                </ul>
+            </td>
+        </tr>
+        <!-- description -->
+        <tr>
+            <td>description</td>
+            <td>Description</td>
+            <td></td>
+            <td>Mandatory</td>
+            <td>No repeats</td>
+            <td>Briefly describe the item, such as its physical characteristics and/or historical/cultural context.</td>
+            <td>
+                <ul>
+                    <li>Full-body parian marble statue of a young male figure reclining and holding an instrument-like object</li>
+                    <li>Marble sarcophagus with sculpted paws supporting the front half. Carved into the front face are five figures (two female, three male), all appearing to hold a scroll in one hand and gesturing with the other.</li>
+                    <li>Marble sculpture depicting the myth of Laocoon, a Trojan priest of Apollo. As divine punishment for warning the Trojans about accepting the Greeks' wooden horse, he and his sons were killed by flesh-eating snakes.</li>
+                </ul>
+            </td>
+        </tr>
+        <!-- location -->
+        <tr>
+            <td>location</td>
+            <td></td>
+            <td></td>
+            <td>Mandatory</td>
+            <td>Repeats</td>
+            <td>{[Provenance]}; [Current location], in City, {State/Province}, Country format. Provide provenance as available, but only listing the artifact's current location is also acceptable. If provenance and current location are the same, only list the location once.</td>
+            <td>
+                <ul>
+                    <li>Rome, Italy; Florence, Italy</li>
+                    <li>Athens, Greece</li>
+                    <li>New York, New York, United States</li>
+                </ul>
+            </td>
+        </tr>
+        <!-- latitude -->
+        <tr>
+            <td>latitude</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Optional</td>
+            <td>Latitude of provenance, if available. If not available, latitude of current location.</td>
+            <td>
+                <ul>
+                    <li>41.892112</li>
+                    <li>43.767784</li>
+                    <li>41.893300</li>
+                </ul>
+            </td>
+        </tr>
+        <!-- longitude -->
+        <tr>
+            <td>longitude</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Optional</td>
+            <td>Longitude of provenance, if available. If not available, latitude of current location.</td>
+            <td>
+                <ul>
+                    <li>12.496921</li>
+                    <li>11.255312</li>
+                    <li>12.495100</li>
+                </ul>
+            </td>
+        </tr>
+        <!-- source -->
+        <tr>
+            <td>source</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <!-- type -->
+        <tr>
+            <td>type</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <!-- format -->
+        <tr>
+            <td>format</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <!-- rights -->
+        <tr>
+            <td>rights</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <!-- rightsstatement -->
+        <tr>
+            <td>rightsstatement</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <!-- display_template -->
+        <tr>
+            <td>display_template</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <!-- object_location -->
+        <tr>
+            <td>object_location</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <!-- image_thumb -->
+        <tr>
+            <td>image_thumb</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <!-- image_alt_text -->
+        <tr>
+            <td>image_alt_text</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!-- <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </td>
+        </tr> -->
+    

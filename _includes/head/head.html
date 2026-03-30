@@ -26,6 +26,13 @@
 <!-- load custom css last to allow overrides -->
 <link rel="stylesheet" href="{{ '/assets/css/cb.css' | relative_url }}" type="text/css">
 
+<!-- make sure table text is aligned to the top -->
+<style>
+    td {
+        vertical-align: top;
+    }
+</style>
+
 {% comment %} 
     Meta tags and analytics are added during production build ONLY 
 {%- endcomment -%}
