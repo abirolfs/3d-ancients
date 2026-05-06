@@ -53,16 +53,16 @@ layout: page
         <!-- creator -->
         <tr>
             <td>creator</td>
-            <td></td>
-            <td></td>
+            <td>Creator</td>
+            <td><a href='https://id.loc.gov/authorities/names.html'>Library of Congress Name Authority File (LCNAF)</a></td>
             <td>Mandatory, if applicable</td>
             <td>Repeats</td>
-            <td></td>
+            <td>Follow the format provided on LCNAF. If there are multiple creators, separate by semicolons.</td>
             <td>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Praxiteles</li>
+                    <li>Athanadoros; Hagesander; Polydoros</li>
+                    <li>Unknown</li>
                 </ul>
             </td>
         </tr>
@@ -130,6 +130,22 @@ layout: page
                 </ul>
             </td>
         </tr>
+        <!-- display-date -->
+        <tr>
+            <td>display_date</td>
+            <td></td>
+            <td></td>
+            <td>Mandatory, if applicable</td>
+            <td>Repeats</td>
+            <td>For a single, specific year, enter date in YYYY format, where YYYY is a one to four-digit, non-padded number. For a time period, enter date in YYYY - YYYY format, with the earliest date before the -, and latest date after. At the end, indicate whether the date or date range is BCE or CE, unless the first date is BCE and the second date is CE. If that is the case, indicate BCE/CE after each year.</td>
+            <td>
+                <ul>
+                    <li>40 - 20 BCE</li>
+                    <li>200 CE</li>
+                    <li>50 BCE - 50 CE</li>
+                </ul>
+            </td>
+        </tr>
         <!-- time_period_name -->
             <td>time_period_name</td>
             <td></td>
@@ -182,9 +198,9 @@ layout: page
             <td>latitude</td>
             <td></td>
             <td></td>
-            <td></td>
             <td>Optional</td>
-            <td>Latitude of provenance, if available. If not available, latitude of current location.</td>
+            <td>Repeats</td>
+            <td>Latitude of provenance, if available. If not available, latitude of current location. Should have no more than three digits before the decimal point, and no more than six digits after the decimal point.</td>
             <td>
                 <ul>
                     <li>41.892112</li>
@@ -198,9 +214,9 @@ layout: page
             <td>longitude</td>
             <td></td>
             <td></td>
-            <td></td>
             <td>Optional</td>
-            <td>Longitude of provenance, if available. If not available, latitude of current location.</td>
+            <td>Repeats</td>
+            <td>Longitude of provenance, if available. If not available, longitude of current location. Should have no more than three digits before the decimal point, and no more than six digits after the decimal point.</td>
             <td>
                 <ul>
                     <li>12.496921</li>
@@ -212,80 +228,78 @@ layout: page
         <!-- source -->
         <tr>
             <td>source</td>
+            <td>Source</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Mandatory, if applicable</td>
+            <td>Repeats</td>
+            <td>Should be expressed in the format: [Name of physical collection], [Name of gallery/museum]. If the name of the physical collection is not available, simply include the name of the gallery/museum that the item is housed in.</td>
             <td>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Sculpture, The Uffizi Gallery</li>
+                    <li>Museo Pio-Clementino</li>
+                    <li>Vatican Museums</li>
                 </ul>
             </td>
         </tr>
         <!-- type -->
         <tr>
             <td>type</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Type</td>
+            <td><a href='https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2003-02-12/'>DCMI Type Vocabulary</a></td>
+            <td>Mandatory, if applicable</td>
+            <td>Repeats</td>
+            <td>Follow format guidelines on DCMI. Can also include a second type, to further specify what the item is, but this is not required. Separate multiple types with semicolons. Usually will be 'InteractiveResource;3DModel'.</td>
             <td>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>InteractiveResource;3DModel</li>
+                    <li>InteractiveResource</li>
+                    <li>Image</li>
                 </ul>
             </td>
         </tr>
         <!-- format -->
         <tr>
             <td>format</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Format</td>
+            <td><a href = 'https://www.iana.org/assignments/media-types/media-types.xhtml'>IANA Media Types</a></td>
+            <td>Mandatory</td>
+            <td>Repeats</td>
+            <td>Follow format on IANA. The format for an embedded 3D model would typically be 'text/html'.</td>
             <td>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>text/html</li>
+                    <li>model/obj</li>
+                    <li>model/gltf-binary</li>
                 </ul>
             </td>
         </tr>
         <!-- rights -->
         <tr>
             <td>rights</td>
+            <td>Rights</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Mandatory</td>
+            <td>Repeats</td>
+            <td>Free-text rights statement describing information about rights held in and over the item</td>
             <td>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Copyright 2010- Vatican Museums. Permission for use in this collection given by the Virtual World Heritage Lab at Indiana University (IU) Bloomington. This collection is an academic project within IU.</li>
                 </ul>
             </td>
         </tr>
         <!-- rightsstatement -->
         <tr>
             <td>rightsstatement</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Rights</td>
+            <td><a href='https://creativecommons.org/'>CreativeCommons</a></td>
+            <td>Mandatory, if applicable</td>
+            <td>Repeats</td>
+            <td>Where applicable, provide a link to the standardized rights statement.</td>
             <td>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></li>
+                    <li><a href="https://creativecommons.org/licenses/by-nc/4.0/">https://creativecommons.org/licenses/by-nc/4.0/</a></li>
+                    <li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">https://creativecommons.org/licenses/by-nc-sa/4.0/</a></li>
                 </ul>
             </td>
         </tr>
@@ -294,14 +308,14 @@ layout: page
             <td>display_template</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Mandatory</td>
+            <td>Repeats</td>
+            <td>Supported values match the file names found in “_layouts/item/”.</td>
             <td>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>sketchfab_model</li>
+                    <li>3d_model</li>
+                    <li>image</li>
                 </ul>
             </td>
         </tr>
@@ -310,14 +324,14 @@ layout: page
             <td>object_location</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Mandatory</td>
+            <td>No Repeats</td>
+            <td>Depends on the way that you are accessing an object. If it is through a link, such as a sketchfab embed link, provide the link here. If this item is included in the objects folder of the collection, provide the file path.</td>
             <td>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>https://sketchfab.com/models/fd737c970c2e43419eabaa5da3173166/embed</li>
+                    <li>/objects/example_object_1.obj</li>
+                    <li>/objects/example_object_2.glb</li>
                 </ul>
             </td>
         </tr>
@@ -326,14 +340,14 @@ layout: page
             <td>image_thumb</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Mandatory</td>
+            <td>No Repeats</td>
+            <td>File path to the thumbnail image. Should be under /objects/thumbs/.</td>
             <td>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>objects/thumbs/item-003-th.jpg</li>
+                    <li>objects/thumbs/item-005-th.jpg</li>
+                    <li>objects/thumbs/item-006-th.jpg</li>
                 </ul>
             </td>
         </tr>
@@ -342,14 +356,14 @@ layout: page
             <td>image_alt_text</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Mandatory</td>
+            <td>No Repeats</td>
+            <td>Free-text description of the thumbnail image to be used as alternative text.</td>
             <td>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Marble sarcophagus with sculpted paws supporting the front half. Carved into the front face are five figures (two female, three male), all appearing to hold a scroll in one hand and gesturing with the other.</li>
+                    <li>Marble bust of a man with a lean face, mustache, and beard. The man, Lucius Aelius Caesar, wears a breastplate with Medusa's head featured on it.</li>
+                    <li>Full-body statue of a young male figure reclining and holding an instrument-like object with both hands</li>
                 </ul>
             </td>
         </tr>
