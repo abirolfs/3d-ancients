@@ -6,7 +6,7 @@ permalink: /methods.html
 
 # 3D Ancients - Methods
 <br>
-## CollectionBuilder - CSV Framework
+## CollectionBuilder-CSV Framework
 This digital collection was developed utilizing the CollectionBuilder-CSV framework. All collection metadata is contained within a single CSV file, which CollectionBuilder uses to build out the individual items. Several customizations were made, such as adjusting the content and options that appear on site pages and navigation, as well as implementing a custom template for 3D models that originate on SketchFab. For more information about CollectionBuilder, [click here to visit the CollectionBuilder website](https://collectionbuilder.github.io/), and [click here to access the CollectionBuilder-CSV source code](https://github.com/CollectionBuilder/collectionbuilder-csv).
 
 <br>
